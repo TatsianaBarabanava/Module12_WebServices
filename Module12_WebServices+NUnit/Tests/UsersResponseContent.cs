@@ -21,7 +21,7 @@ namespace Module12_API.Tests
             List<User> users = JsonConvert.DeserializeObject<List<User>>(response);
 
             //Assert
-            Assert.AreEqual(10, users.Count);
+            Assert.AreEqual(10, users.Count, "The number of users is different from 10.");
         }
     }
 }

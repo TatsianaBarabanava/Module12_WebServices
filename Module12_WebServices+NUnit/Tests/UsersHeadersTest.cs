@@ -19,8 +19,8 @@ namespace Module12_API.Tests
             HttpWebResponse response = RequestUtils.GetRequestResponse(RequestUtils.userEndpoint, RequestUtils.getRequest);
 
             //Assert
-            Assert.IsTrue(response.Headers.AllKeys.Contains(headerKey));
-            Assert.IsTrue(response.Headers.GetValues(headerKey).Contains("application/json; charset=utf-8"));
+            Assert.IsTrue(response.Headers.AllKeys.Contains(headerKey), "The content-type header does not exist in the response.");
+            Assert.IsTrue(response.Headers.GetValues(headerKey).Contains("application/json; charset=utf-8"), "The content-type header does not match the expected one.");
         }
     }
 }

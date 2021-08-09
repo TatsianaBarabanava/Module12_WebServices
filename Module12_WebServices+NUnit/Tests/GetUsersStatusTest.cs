@@ -15,7 +15,7 @@ namespace Module12_API.Tests
             HttpWebResponse response = RequestUtils.GetRequestResponse(RequestUtils.userEndpoint, RequestUtils.getRequest);
 
             //Assert
-            Assert.AreEqual(response.StatusCode, HttpStatusCode.OK);
+            Assert.AreEqual(response.StatusCode, HttpStatusCode.OK, "The actual status code is different from the expected.");
         }
     }
 }
